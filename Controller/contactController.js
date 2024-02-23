@@ -9,6 +9,12 @@ const getContacts=(req,res)=>{
 // @route POST /api/contacts
 // @access Public
 const createContact=(req,res)=>{
+    console.log("the request body is",req.body);
+    const {name,phone,email}=req.body;
+    if(!name || !phone || !email){
+        res.status(400);
+        throw new Error("All fields are mendotory !!");
+    }
     res.status(201).json({message:'Create Contact'})
 }
 // @desc Get Individual Contact
