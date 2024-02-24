@@ -1,3 +1,4 @@
 express
 dotenv
 express-async-handler
+mongoose
