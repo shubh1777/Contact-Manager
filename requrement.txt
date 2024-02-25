@@ -3,3 +3,4 @@ dotenv
 express-async-handler
 mongoose
 bcrypt
+jsonwebtoken
