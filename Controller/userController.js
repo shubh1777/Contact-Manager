@@ -72,10 +72,10 @@ if(user && (await bcrypt.compare(password,user.password))){
 
 // @desc get current user
 // @route GET /api/users/current
-// @access Public
+// @access Private
 
 const currentUser=asyncHandler( async (req,res)=>{
-    res.json({message:"current user Information"})
+    res.json(req.user)
 });
 
 
