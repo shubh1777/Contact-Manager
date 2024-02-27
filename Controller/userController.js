@@ -61,7 +61,7 @@ if(user && (await bcrypt.compare(password,user.password))){
         id:user.id
     },
     process.env.ACCESS_TOKEN_SECRET,
-     {expiresIn:"1m"}
+     {expiresIn:"30m"}
     )
     res.status(200).json({accessToken})
 }else{
